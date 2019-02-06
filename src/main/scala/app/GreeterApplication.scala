@@ -3,12 +3,21 @@ package app
 import scala.io.StdIn
 
 object GreeterApplication extends App {
+  class Person (val name : String)
+  val nonames = StdIn.readLine("What is your name?")
+  val p = new Person("george")
 
-  def greet(name : String) : Unit	=	println(s"Hello $egg")
+    def greet(name : String) :	Unit	=	{
 
-    val egg = StdIn.readLine("What is your name?")
+      if	(name	==	p.name)	{
 
+        println(s"You don't get a hello!")
 
-    greet(egg)
+      }	else	{
 
+        println(s"Hello $name")
+      }
+
+    }
+  greet(nonames)
 }
